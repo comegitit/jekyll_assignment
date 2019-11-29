@@ -1,0 +1,16 @@
+---
+layout: default
+title: Staff
+---
+<br><br><br><br>
+<h1>Staff *** Collection ***</h1>
+<br><br>
+<ul>
+  {% for author in site.authors %}
+    <li>
+      <h2 class="bloghighlight"><a href="{{ author.url }}">{{ author.name }}</a></h2>
+      <h3>{{ author.position }}</h3>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,22 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Roy's personal portfolio site">
+  <meta name="keywords" content="web design, personal, Calgary, agency, web agency">
+  <meta name="author" content="Roy Aggarwal">
+  <link rel="stylesheet" href="./assets/css/styles.scss">
+  <!--For Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+  <!--For Font Awesome icons-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- <title>Assig Final CMPT 260</title> -->
+  <title>{{ page.title }}</title>
+</head>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<nav><ul class="main-nav">
+  {% for item in site.data.navigation %}
+  <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+  {% endfor %}
+</ul></nav>
